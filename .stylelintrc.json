@@ -1,0 +1,30 @@
+{
+  "plugins": [
+    "stylelint-order",
+    "stylelint-prettier"
+  ],
+  "rules": {
+    "prettier/prettier": true,
+    "block-closing-brace-empty-line-before": "never",
+    "block-closing-brace-newline-after": "always-single-line",
+    "block-no-empty": true,
+    "block-opening-brace-newline-before": "never-single-line",
+    "color-hex-case": "lower",
+    "color-hex-length": "short",
+    "color-named": "never",
+    
+    "comment-empty-line-before": "always",
+    "comment-no-empty": true,
+   
+  
+    "block-closing-brace-newline-before": null,
+    "block-closing-brace-space-before": null,
+    "block-opening-brace-newline-after": null,
+    "block-opening-brace-space-after": null,
+    "block-opening-brace-space-before": null,
+    "declaration-block-semicolon-newline-after": null,
+    "declaration-block-semicolon-space-after": null,
+    "declaration-block-semicolon-space-before": null,
+    "declaration-block-trailing-semicolon": null
+  }
+  }

@@ -1,0 +1,11 @@
+{
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 10000,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true,
+    
+  },
+  "editor.codeActionsOnSaveTimeout": 5000
+}
