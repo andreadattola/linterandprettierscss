@@ -1,51 +1,150 @@
-$-whitecolor: #fff;
-
-html {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.some-class {
-  background: #fff;
-}
-
-.someclass {
-  &-x {
-    background-color: #123123;
-    font-size: 3rem;
-  }
-}
-
-.header {
-  background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)
-    ),
-    url(../../public/images/hero.jpeg);
-  background-position: top;
-  background-size: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  height: 95vh;
+header {
+  width: 100%;
+  float: left;
+  padding: 12rem 0;
   position: relative;
+  overflow: hidden;
 
-  &__logo-box {
-    left: 4rem;
-    position: absolute;
-    top: 4rem;
+  body > & {
+    background: {
+      color: $al-blue-mezzo-light;
+      image: linear-gradient(to bottom left, $al-blue-light, $al-blue-dark);
+    }
   }
 
-  &__logo {
-    height: 3.5rem;
+  h1 {
+    font-size: 2.4em;
+    letter-spacing: 0.2rem;
+    font-family: 'OpenSans300';
+    background: rgba($al-blue-light, 0.7);
+    display: inline-block;
+    max-height: 120px;
+    padding: 8px 16px;
+    margin: 16px 0 24px;
+    position: relative;
+    border-radius: 3px;
+    animation: pulse 1s cubic-bezier(0.17, 0.67, 0.83, 0.67) infinite;
+
+    &:before,
+    &:after {
+      border-radius: 3px;
+      position: absolute;
+      top: 0;
+      left: 5%;
+      width: 90%;
+      height: 100%;
+      content: '';
+      display: block;
+      z-index: -1;
+      background: rgba($al-blue-light, 0.3);
+      box-shadow: 0 1px 30px rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.1);
+      //animation: pulse 5s cubic-bezier(.17,.67,.83,.67) infinite;
+    }
+
+    &:before {
+      transform: rotate(16deg) scale(1.1);
+      animation-duration: 1s;
+      animation-delay: 0.5s;
+    }
+
+    &:after {
+      transform: rotate(-16deg) scale(1.1);
+      animation-duration: 2s;
+      animation-delay: 1s;
+    }
   }
 
-  &__text-box {
-    left: 50%;
-    position: absolute;
+  p {
+    margin: 3em 0;
+    font-size: 1.2em;
+
+    strong span {
+      border-bottom: 2px solid $al-blue-light;
+    }
+  }
+}
+//footer
+//prova-features-prov
+.footer-section {
+  width: 100%;
+  padding-bottom: 2em;
+  background: $al-black;
+  color: #fff;
+  position: relative;
+  float: left;
+
+  p {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    float: left;
     text-align: center;
-    top: 40%;
-    transform: translate(-50%, -50%);
+    color: #496f92;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    font-weight: 800;
+
+    a {
+      color: $al-blue-light;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        color: $al-pink-dark;
+      }
+    }
+
+    &.version {
+      font-size: 0.65em;
+    }
+  }
+
+  .share {
+    width: 100%;
+    margin: 40px auto 0;
+    float: left;
+    height: 100px;
+    float: left;
+    line-height: 0;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+      border-bottom: none !important;
+      position: relative;
+      transition: transform 0.3s ease;
+
+      &:after {
+        position: absolute;
+        display: block;
+
+        content: 'Spread the word';
+        transform: translateY(-20px) translateX(-50%);
+        color: #55acee;
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        width: 200px;
+        text-align: center;
+        left: 50%;
+      }
+
+      &:hover {
+        transform: scale(0.9) translateY(-5px);
+
+        &:after {
+          transform: translateY(0) translateX(-50%) scale(1.1);
+          opacity: 1;
+        }
+      }
+    }
+
+    img {
+      max-width: 80px;
+      margin-top: -10px;
+    }
   }
 }
